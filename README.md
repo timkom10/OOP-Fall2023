@@ -1,4 +1,4 @@
-<img align="left" src="/SE450-Github.png" width="400"/>
+<img align="left" src="/SE450-Github.png" width="200"/>
 
 <!-- <img align="right" src="/SE350-Github.png" width="200"/> -->
 
