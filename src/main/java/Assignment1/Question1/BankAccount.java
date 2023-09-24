@@ -2,7 +2,17 @@ package Assignment1.Question1;
 public class BankAccount {
     private final int accountNumber;
     private final String accountHolderName;
-    accountType type;
+
+    public enum accountType {
+        SAVINGS("SAVINGS"), CHECKING("CHECKING");
+        private String span;
+
+        accountType(String string) {
+            span = string;
+        }
+    }
+
+    private accountType type;
     private double balance;
 
     public BankAccount(int accountNumber, String accountHolderName, double initialBalance, accountType type) {
@@ -31,12 +41,8 @@ public class BankAccount {
     }
 
     public void getAccountInfo() {
-        System.out.printf("Account Number: %d, Account Holder: %s, Account Type: %s, Balance: $%.2f", this.accountNumber, this.accountHolderName, this.type, this.balance);
+        System.out.printf("Account Number: %d, Account Holder: %s, Account Type: %s, Balance: $%.2f", this.accountNumber, this.accountHolderName, this.type.span, this.balance);
     }
 
-    private enum accountType {SAVINGS("SAVINGS"), CHECKING("CHECKING");
-    private String span;
-    accountType(String string){
-        span = string;
-    }}
+
 }

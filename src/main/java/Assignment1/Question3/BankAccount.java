@@ -1,11 +1,20 @@
 package Assignment1.Question3;
 
 public class BankAccount {
-    private enum accountType {SAVINGS, CHECKING}
 
     private final int accountNumber;
     private final String accountHolderName;
-    accountType type;
+
+    public enum accountType {
+        SAVINGS("SAVINGS"), CHECKING("CHECKING");
+        private String span;
+
+        accountType(String string) {
+            span = string;
+        }
+    }
+
+    private accountType type;
     private double balance;
 
     public BankAccount(int accountNumber, String accountHolderName, double initialBalance, accountType type) {
@@ -34,19 +43,19 @@ public class BankAccount {
     }
 
     public void getAccountInfo() {
-        System.out.printf("Account Number: %d, Account Holder: %s, Account Type: %s, Balance: $%.2f %n", this.accountNumber, this.accountHolderName, this.type, this.balance);
+        System.out.printf("Account Number: %d, Account Holder: %s, Account Type: %s, Balance: $%.2f %n", this.accountNumber, this.accountHolderName, this.type.span, this.balance);
     }
 
-    public void transfer(double amount,  BankAccount destinationAccount){
-        if (amount <= this.balance){
-            System.out.printf("Transferring $%.2f to %s");
+    public void transfer(double amount,  BankAccount destinationAccount) {
+        if (amount <= this.balance) {
+            this.withdraw(amount);
+            destinationAccount.deposit(amount);
+            System.out.printf("Transferring $%.2f to %s, you have $%.2f remaining balance", amount, destinationAccount.accountHolderName, this.balance);
+        } else {
+            System.out.println("Invalid Amount to transfer");
         }
+
     }
-    public void main() {
-        BankAccount account = new BankAccount(12345, "John Doe", 1000, accountType.SAVINGS);
-        account.deposit(500);
-        account.withdraw(300);
-        account.getAccountInfo();
-    }
+
 
 }
