@@ -36,7 +36,7 @@ public class BankAccount {
             this.balance = this.balance - amount;
             System.out.printf("Current Balance is: %f %n", this.balance);
         } else {
-            System.out.println("Invalid Amount");
+            System.out.println("Insufficient Balance");
         }
     }
 

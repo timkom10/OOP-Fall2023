@@ -38,7 +38,7 @@ public class BankAccount {
             this.balance = this.balance - amount;
             System.out.printf("Current Balance is: %f %n", this.balance);
         } else {
-            System.out.println("Invalid Amount");
+            System.out.println("Insufficient Balance");
         }
     }
 
@@ -47,12 +47,12 @@ public class BankAccount {
     }
 
     public void transfer(double amount,  BankAccount destinationAccount) {
-        if (amount <= this.balance) {
+        if (amount <= this.balance && amount > 0) {
             this.withdraw(amount);
             destinationAccount.deposit(amount);
-            System.out.printf("Transferring $%.2f to %s, you have $%.2f remaining balance", amount, destinationAccount.accountHolderName, this.balance);
+            System.out.printf("Transferring $%.2f to %s %n", amount, destinationAccount.accountHolderName);
         } else {
-            System.out.println("Invalid Amount to transfer");
+            System.out.println("Insufficient Balance");
         }
 
     }
