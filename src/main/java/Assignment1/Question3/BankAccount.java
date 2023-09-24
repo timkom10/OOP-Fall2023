@@ -34,9 +34,14 @@ public class BankAccount {
     }
 
     public void getAccountInfo() {
-        System.out.printf("Account Number: %d, Account Holder: %s, Account Type: %s, Balance: $%.2f", this.accountNumber, this.accountHolderName, this.type, this.balance);
+        System.out.printf("Account Number: %d, Account Holder: %s, Account Type: %s, Balance: $%.2f %n", this.accountNumber, this.accountHolderName, this.type, this.balance);
     }
 
+    public void transfer(double amount,  BankAccount destinationAccount){
+        if (amount <= this.balance){
+            System.out.printf("Transferring $%.2f to %s");
+        }
+    }
     public void main() {
         BankAccount account = new BankAccount(12345, "John Doe", 1000, accountType.SAVINGS);
         account.deposit(500);
