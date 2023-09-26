@@ -15,8 +15,14 @@ public class BankAccount {
     }
 
     private accountType type;
-    protected double balance;
+    private double balance;
 
+    protected double getBalance(){
+        return this.balance;
+    }
+    protected void setBalance(double newBal){
+        this.balance = newBal;
+    }
     public BankAccount(int accountNumber, String accountHolderName, double initialBalance, accountType type) {
         this.accountNumber = accountNumber;
         this.accountHolderName = accountHolderName;

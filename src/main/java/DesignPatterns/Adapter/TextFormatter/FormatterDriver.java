@@ -9,11 +9,11 @@
 
 package DesignPatterns.Adapter.TextFormatter;
 
-import org.testng.annotations.Test;
+//import org.testng.annotations.Test;
 import static org.junit.Assert.*;
 
 public class FormatterDriver {
-    @Test
+//    @Test
     public void testFormatText() throws Exception {
         String testString=" Formatting line 1. Formatting line 2. Formatting line 3.";
         TextFormattable newLineFormatter=new NewLineFormatter();

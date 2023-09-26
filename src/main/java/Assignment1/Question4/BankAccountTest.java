@@ -13,6 +13,6 @@ public class BankAccountTest {
         account.getAccountInfo();
         notJohn.getAccountInfo();
 
-        CheckingAccount newJohn = new CheckingAccount(12345, "John Doe", 1000, 1);
+        CheckingAccount newJohn = new CheckingAccount(12345, "John Doe", 1000, BankAccount.accountType.CHECKING, 1);
     }
 }

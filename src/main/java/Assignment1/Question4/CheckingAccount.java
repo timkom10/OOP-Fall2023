@@ -3,15 +3,17 @@ package Assignment1.Question4;
 
 public class CheckingAccount extends BankAccount {
     private double overdraftLimit;
-    public CheckingAccount(int accountNumber, String accountHolderName, double initialBalance, double overdraftLimit) {
-        super(accountNumber, accountHolderName, initialBalance, accountType.CHECKING);
+    public CheckingAccount(int accountNumber, String accountHolderName, double initialBalance, accountType type, double overdraftLimit) {
+        super(accountNumber, accountHolderName, initialBalance, type);
         this.overdraftLimit = overdraftLimit;
     }
 
     @Override
     public void withdraw(double amount) {
-        if (amount > 0 && amount <= this.balance + this.overdraftLimit) {
-            this.balance = this.balance - amount;
+        double balance = this.getBalance();
+        if (amount > 0 && amount <= balance + this.overdraftLimit) {
+            balance = balance - amount;
+            this.setBalance(balance);
         }
         else{
             System.out.println("Insufficient funds");
