@@ -1,5 +1,6 @@
 package Assignment2.Question2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Customer implements Reportable {
@@ -8,6 +9,12 @@ public abstract class Customer implements Reportable {
     int discountRate;
     List<RentalOrder> orders;
 
+    public Customer(int id, String name, int discountRate){
+        this.id = id;
+        this.name = name;
+        this.discountRate = discountRate;
+        this.orders = new ArrayList<>();
+    }
     @Override
     public String generateReport() {
         return null;
