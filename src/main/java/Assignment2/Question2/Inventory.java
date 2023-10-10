@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Inventory {
-    int inventoryID;
-    VehicleType type;
-    List<Vehicle> vehicles = new ArrayList<>();
+    private int inventoryID;
+    private VehicleType type;
+    private List<Vehicle> vehicles = new ArrayList<>();
 
     public Inventory(int inventoryID, VehicleType type){
         this.inventoryID = inventoryID;
