@@ -16,7 +16,7 @@ public class RentalOffice implements Reportable{
     }
     @Override
     public String generateReport() {
-        return "OfficeID: " + String.valueOf(this.officeID) + "\n Location Zip Code: " + this.locationZip + "\n Inventory: " + String.join( ",", (Iterable) this.inventoryList) + "\n Order History: " + String.join(",", (Iterable) this.orderList);
+        return "OfficeID: " + String.valueOf(this.officeID) + ",\n Location Zip Code: " + this.locationZip + ",\n Inventory: " + String.join( ",", (Iterable) this.inventoryList) + ",\n Order History: " + String.join(",", (Iterable) this.orderList);
     }
 
     public void addInventory(Inventory inv){

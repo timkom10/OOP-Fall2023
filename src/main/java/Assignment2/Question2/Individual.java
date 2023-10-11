@@ -15,11 +15,11 @@ public class Individual extends Customer {
     @Override
     public String generateReport() {
         return "ID: " + String.valueOf(this.getId())
-                + "\nName: " + this.name
-                + "\nDiscount Rate: " + String.valueOf(this.getDiscountRate())
-                + "\nAge: " + String.valueOf(this.age)
-                + "\nState: " + this.state
-                + "\nZipcode: " + this.zip
-                + "\nOrder History: " + String.valueOf(this.getOrderHistory());
+                + ",\nName: " + this.name
+                + ",\nDiscount Rate: " + String.valueOf(this.getDiscountRate())
+                + ",\nAge: " + String.valueOf(this.age)
+                + ",\nState: " + this.state
+                + ",\nZipcode: " + this.zip
+                + ",\nOrder History: " + String.valueOf(this.getOrderHistory());
     }
 }
