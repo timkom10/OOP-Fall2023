@@ -16,11 +16,19 @@ public class RentalOffice implements Reportable{
     }
     @Override
     public String generateReport() {
+
+        String inventoryListStr = "";
+        for (Inventory inventory: inventoryList){
+            inventoryListStr += inventory.toString() + ", ";
+        }
+        String orderListStr = "";
+        for (RentalOrder order: orderList){
+            orderListStr += order.toString();
+        }
         return "OfficeID: " + String.valueOf(this.officeID)
                 + ",\n Location Zip Code: " + this.locationZip
-                + ",\n Inventory: " + String.join( ",", (Iterable) this.inventoryList)
-
-                + ",\n Order History: " + String.join(",", (Iterable) this.orderList);
+                + ",\n Inventory: " + inventoryListStr
+                + ",\n Order History: " + orderListStr;
     }
 
     public void addInventory(Inventory inv){

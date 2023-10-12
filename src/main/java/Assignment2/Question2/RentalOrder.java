@@ -58,4 +58,11 @@ public class RentalOrder {
     public void setVehicle(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
+
+    public String toString(){
+        return "Total Cost: " + String.valueOf(this.getTotalCost()) + ", "
+                + "Customer: " + String.valueOf(this.getCustomer()) + ", "
+                + "Vehicle: " + String.valueOf(this.getVehicle()) + ", "
+                + "Rental Length: " + String.valueOf(this.getRentalLength()) + ", ";
+    }
 }

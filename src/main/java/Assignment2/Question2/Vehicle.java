@@ -65,8 +65,8 @@ public class Vehicle {
         this.type = type;
     }
 
-    public VehicleType getType() {
-        return type;
+    public String getType() {
+        return type.span;
     }
 
     public void setAvailable(boolean available) {
