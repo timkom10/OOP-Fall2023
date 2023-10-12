@@ -41,4 +41,7 @@ public class Inventory {
             Boolean isRemoved = this.vehicles.remove(vehicle);
             System.out.println(isRemoved);
         }
+    public String toString(){
+
+        }
 }

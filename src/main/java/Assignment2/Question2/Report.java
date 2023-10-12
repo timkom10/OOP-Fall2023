@@ -16,7 +16,8 @@ public class Report {
         File file = new File(fileName);
         try {
             FileWriter outputfile = new FileWriter(file);
-
+            outputfile.write(reportable.generateReport());
+            outputfile.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
