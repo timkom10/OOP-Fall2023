@@ -4,18 +4,18 @@ public class LinuxFactory extends GUIFactory{
     @Override
     public AbstractTextField createTextField() {
 
-        return null;
+        return new LinuxTextField();
     }
 
     @Override
     public AbstractPushButton createPushButton() {
 
-        return null;
+        return new LinuxPushButton();
     }
 
     @Override
     public AbstractListBox createListBox() {
 
-        return null;
+        return  new LinuxListBox();
     }
 }

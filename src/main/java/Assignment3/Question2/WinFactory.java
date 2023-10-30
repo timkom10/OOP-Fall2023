@@ -4,18 +4,18 @@ public class WinFactory extends GUIFactory{
     @Override
     public AbstractTextField createTextField(){
 
-        return null;
+        return new WindowsTextField();
     }
 
     @Override
     public AbstractPushButton createPushButton() {
 
-        return null;
+        return new WindowsPushButton();
     }
 
     @Override
     public AbstractListBox createListBox() {
 
-        return null;
+        return new WindowsListBox();
     }
 }

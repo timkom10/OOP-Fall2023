@@ -4,18 +4,18 @@ public class MacFactory extends GUIFactory{
     @Override
     public AbstractTextField createTextField() {
 
-        return null;
+        return new MacTextField();
     }
 
     @Override
     public AbstractPushButton createPushButton() {
 
-        return null;
+        return new MacPushButton();
     }
 
     @Override
     public AbstractListBox createListBox() {
 
-        return null;
+        return new MacListBox();
     }
 }
