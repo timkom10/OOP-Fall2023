@@ -23,7 +23,7 @@ abstract class MyClass implements MyInterface
     public void show1() {
         System.out.println("MyClass is implementing the interface method show1().");
     }
-// public abstract void show2();
+//    public abstract void show2();
 }
 class MySubClass extends MyClass
 {

@@ -27,7 +27,7 @@ interface DefaultInterfaceB {
     }
 }
 class MyNewClass implements DefaultInterfaceA, DefaultInterfaceB {
-    public void show() {
+    public void show( ) {
         System.out.println("MyNewClass is implementing the Interface method-show().");
     }
 
