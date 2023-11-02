@@ -1,6 +1,6 @@
 package Assignment3.Question2;
 
-public class WinFactory extends GUIFactory{
+public class WinFactory implements GUIFactory{
     @Override
     public AbstractTextField createTextField(){
 

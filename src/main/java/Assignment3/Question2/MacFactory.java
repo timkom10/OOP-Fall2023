@@ -1,6 +1,6 @@
 package Assignment3.Question2;
 
-public class MacFactory extends GUIFactory{
+public class MacFactory implements GUIFactory{
     @Override
     public AbstractTextField createTextField() {
 

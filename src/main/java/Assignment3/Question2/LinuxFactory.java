@@ -1,6 +1,6 @@
 package Assignment3.Question2;
 
-public class LinuxFactory extends GUIFactory{
+public class LinuxFactory implements GUIFactory{
     @Override
     public AbstractTextField createTextField() {
 
