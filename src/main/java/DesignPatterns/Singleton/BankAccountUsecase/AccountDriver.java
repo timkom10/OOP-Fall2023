@@ -14,7 +14,7 @@ public class AccountDriver {
         System.out.println("App start \t " + java.time.LocalDateTime.now().format(java.time.format.DateTimeFormatter.ofPattern("HH:mm:ss")));
 //        String logPattern = CreateBankAccount.logPattern();
 
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
 
 
         System.out.println("#######################");

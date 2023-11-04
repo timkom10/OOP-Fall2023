@@ -19,7 +19,7 @@ public class GetterSetterExample {
     private int privateInt;
     private String name;
 
-//    //Getter
+    //    //Getter
 //    public int getPrivateInt() {
 //        return privateInt; }
 //    //Setter

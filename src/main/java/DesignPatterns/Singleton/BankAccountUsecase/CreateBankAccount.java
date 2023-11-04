@@ -10,7 +10,7 @@
 package DesignPatterns.Singleton.BankAccountUsecase;
 
 public class CreateBankAccount {
-    private static final CreateBankAccount newAccount=new CreateBankAccount();
+    private static CreateBankAccount newAccount;
     // constructor
     private CreateBankAccount() {
 //        print time in nice format
@@ -18,12 +18,12 @@ public class CreateBankAccount {
 
     }
     public static CreateBankAccount getNewAccount() {
-//        if (newAccount == null) {
-//            newAccount = new CreateBankAccount();
-//            System.out.println("New Account created.");
-//        } else {
-//            System.out.println("Account already opened.");
-//        }
+        if (newAccount == null) {
+            newAccount = new CreateBankAccount();
+            System.out.println("New Account created.");
+        } else {
+            System.out.println("Account already opened.");
+        }
         return newAccount;
     }
 
