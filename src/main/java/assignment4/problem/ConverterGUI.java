@@ -80,6 +80,9 @@ public class ConverterGUI {
 			public void actionPerformed(ActionEvent event) {
 
 				System.out.println("Convert button clicked");
+
+
+				Client.convert();
 				//TODO SUMMARY: You get the input from UI, you call the Convert method in the Client class, and you set the output in the UI
 
 				//    getText() on inputField

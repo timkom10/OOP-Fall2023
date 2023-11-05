@@ -10,7 +10,10 @@
 package assignment4.problem;
 
 public class Client {
-
+    Handler chain;
+    static double convert(){
+        return 0;
+    }
 	//TODO Here is where you implement the converter logic using the requested "patterns" (Chain of Responsibility, and Decorator)
 	//TODO You can have a static method Convert(..) here
 	//TODO static Convert(...) method?
