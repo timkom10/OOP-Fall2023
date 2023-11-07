@@ -7,7 +7,9 @@ public class MileHandler implements Handler{
         this.chain=nextChain;
     }
 
-
+    public Handler getChain(){
+        return this.chain;
+    }
     @Override
     public double goNext(double km, String unit) throws Exception {
         if (unit.equals("Mile")){
