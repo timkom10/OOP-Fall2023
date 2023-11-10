@@ -17,4 +17,9 @@ public class YardHandler implements Handler {
             return this.chain.goNext(km, unit);
         }
     }
+
+    @Override
+    public Handler getChain() {
+        return this.chain;
+    }
 }

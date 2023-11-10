@@ -19,4 +19,9 @@ public class FootHandler implements Handler{
         }
     }
 
+    @Override
+    public Handler getChain() {
+        return this.chain;
+    }
+
 }

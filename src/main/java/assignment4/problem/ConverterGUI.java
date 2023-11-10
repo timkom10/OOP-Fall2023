@@ -25,9 +25,10 @@ public class ConverterGUI {
 
 	private String[] units = {"Mile", "Yard", "Foot"};
 	private JFrame frame;
-
+	private Client client;
 	public ConverterGUI() {
 		initializeFrame();
+		this.client = new Client();
 	}
 
 	private void initializeFrame() {
@@ -81,8 +82,9 @@ public class ConverterGUI {
 
 				System.out.println("Convert button clicked");
 
-
-				Client.convert();
+				double km = Double.valueOf(inputField.getText());
+				String unit = String.valueOf(outputUnit.getSelectedItem());
+				this.client.convert(km, unit);
 				//TODO SUMMARY: You get the input from UI, you call the Convert method in the Client class, and you set the output in the UI
 
 				//    getText() on inputField

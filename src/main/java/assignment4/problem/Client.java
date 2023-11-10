@@ -11,11 +11,19 @@ package assignment4.problem;
 
 public class Client {
 
-    Handler chain = new MileHandler();
-    chain.setNextChain(new YardHandler());
-    chain.getChain().setNextChain(new FootHandler());
-    static double convert(){
-        return 0;
+    private Handler cchain;
+    Client(){
+        this.cchain =  new MileHandler();
+        this.cchain.setNextChain(new YardHandler());
+        this.cchain.getChain().setNextChain(new FootHandler());
+    }
+
+    public Handler getChain(){return this.cchain;}
+//    cchain.setNextChain(new YardHandler());
+//    cchain.getChain().setNextChain(new FootHandler());
+    double convert(double km, String unit) throws Exception {
+         double value = this.getChain().goNext(km, unit);
+         return value;
     }
 
 
