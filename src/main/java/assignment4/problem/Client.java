@@ -13,7 +13,7 @@ public class Client {
 
     private Handler cchain;
     Client(){
-        this.cchain =  new MileHandler();
+        this.cchain = new RoundDecorator(new MileHandler());
         this.cchain.setNextChain(new YardHandler());
         this.cchain.getChain().setNextChain(new FootHandler());
     }
@@ -21,9 +21,8 @@ public class Client {
     public Handler getChain(){return this.cchain;}
 //    cchain.setNextChain(new YardHandler());
 //    cchain.getChain().setNextChain(new FootHandler());
-    double convert(double km, String unit) throws Exception {
-         double value = this.getChain().goNext(km, unit);
-         return value;
+    String convert(String km, String unit) throws Exception {
+         return this.getChain().goNext(km, unit);
     }
 
 

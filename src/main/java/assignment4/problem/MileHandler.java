@@ -11,9 +11,9 @@ public class MileHandler implements Handler{
         return this.chain;
     }
     @Override
-    public double goNext(double km, String unit) throws Exception {
+    public String goNext(String km, String unit) throws Exception {
         if (unit.equals("Mile")){
-            return km/1.609;
+            return String.valueOf(Double.parseDouble(km)/1.609);
         }
         else{
             return this.chain.goNext(km, unit);

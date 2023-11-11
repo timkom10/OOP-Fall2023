@@ -9,9 +9,9 @@ public class YardHandler implements Handler {
     }
 
     @Override
-    public double goNext(double km, String unit) throws Exception {
+    public String goNext(String km, String unit) throws Exception {
         if(unit.equals("Yard")){
-            return km * 1093.61;
+            return String.valueOf(Double.parseDouble(km)* 1093.61);
         }
         else{
             return this.chain.goNext(km, unit);

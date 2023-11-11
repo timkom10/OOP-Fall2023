@@ -28,7 +28,7 @@ public class ConverterGUI {
 	private Client client;
 	public ConverterGUI() {
 		initializeFrame();
-		this.client = new Client();
+
 	}
 
 	private void initializeFrame() {
@@ -42,6 +42,7 @@ public class ConverterGUI {
 	}
 
 	private void initUI() {
+		this.client = new Client();
 		JLabel appTitle = new JLabel("Length Converter Program");
 		appTitle.setFont(new Font(Font.MONOSPACED, Font.BOLD, 20));
 		appTitle.setBounds(60, 10, 400, 30);
@@ -75,16 +76,23 @@ public class ConverterGUI {
 		// TODO =============================================================================
 		// TODO You should add ActionListener for the Convert button
 		// TODO Here you have to implement the action listener..
-
+		Client client1 = this.client;
 		ActionListener convertListener = new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent event) {
 
 				System.out.println("Convert button clicked");
-
-				double km = Double.valueOf(inputField.getText());
-				String unit = String.valueOf(outputUnit.getSelectedItem());
-				this.client.convert(km, unit);
+				try {
+					double km = Double.parseDouble(inputField.getText());
+					if (km< 0) {
+						throw new Exception("Negative Number not allowed");
+					}
+					String unit = String.valueOf(outputUnit.getSelectedItem());
+					String outputVal = client1.convert(String.valueOf(km), unit);
+					outputField.setText(outputVal);
+				} catch (Exception e){
+					outputField.setText(String.valueOf(e));
+				}
 				//TODO SUMMARY: You get the input from UI, you call the Convert method in the Client class, and you set the output in the UI
 
 				//    getText() on inputField

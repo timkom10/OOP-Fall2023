@@ -10,9 +10,9 @@ public class FootHandler implements Handler{
     }
 
     @Override
-    public double goNext(double km, String unit) throws Exception {
+    public String goNext(String km, String unit) throws Exception {
         if (unit.equals("Foot")){
-            return km * 3280.84;
+            return String.valueOf(Double.parseDouble(km) * 3280.84);
         }
         else{
             return this.chain.goNext(km, unit);
